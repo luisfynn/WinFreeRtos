@@ -1,0 +1,29 @@
+﻿cl : 명령줄 warning D9035: 'Gm' 옵션은 더 이상 사용되지 않으므로 이후 릴리스에서 제거될 예정입니다.
+  UDPCommandServer.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  Run-time-stats-utils.c
+  main.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  CLI-commands.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  trcStreamingRecorder.c
+  trcSnapshotRecorder.c
+  trcKernelPort.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  FreeRTOS_CLI.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  timers.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  tasks.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\tasks.c(3445,44): warning C4210: 비표준 확장이 사용됨: 함수에서 파일 범위를 제공했습니다.
+  queue.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  port.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  heap_3.c
+C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS\Source\include\task.h(2065,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  list.c
+  코드를 생성하고 있습니다...
+list.obj : warning LNK4075: '/EDITANDCONTINUE'이(가) '/SAFESEH' 사양으로 인해 무시됩니다.
+  WIN32.vcxproj -> C:\Users\luisf\Desktop\Luisfynn_Work\Firmware\test code\FreeRtos_Exercise\FreeRTOSv10.3.1\FreeRTOSv10.3.1\FreeRTOS-Plus\Demo\FreeRTOS_Plus_CLI_with_Trace_Windows_Simulator\.\Debug\RTOSDemo.exe

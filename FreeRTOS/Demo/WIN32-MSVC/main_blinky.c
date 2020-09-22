@@ -247,6 +247,8 @@ uint32_t ulReceivedValue;
 		FreeRTOSConfig.h.  It will not use any CPU time while it is in the
 		Blocked state. */
 		xQueueReceive( xQueue, &ulReceivedValue, portMAX_DELAY );
+		//xQueueReceive(xQueue, &ulReceivedValue, 10);
+
 
 		/*  To get here something must have been received from the queue, but
 		is it an expected value?  Normally calling printf() from a task is not
