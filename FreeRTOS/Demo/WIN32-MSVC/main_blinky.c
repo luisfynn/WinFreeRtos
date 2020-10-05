@@ -94,7 +94,7 @@
 
 /* Priorities at which the tasks are created. */
 #define mainQUEUE_RECEIVE_TASK_PRIORITY		( tskIDLE_PRIORITY + 2 )
-#define	mainQUEUE_SEND_TASK_PRIORITY		( tskIDLE_PRIORITY + 1 )
+#define	mainQUEUE_SEND_TASK_PRIORITY		( tskIDLE_PRIORITY + 3 )
 
 /* The rate at which data is sent to the queue.  The times are converted from
 milliseconds to ticks using the pdMS_TO_TICKS() macro. */
@@ -116,6 +116,7 @@ queue send software timer respectively. */
  */
 static void prvQueueReceiveTask( void *pvParameters );
 static void prvQueueSendTask( void *pvParameters );
+static void prvQueueSend2Task(void* pvParameters);
 
 /*
  * The callback function executed when the software timer expires.
@@ -142,7 +143,7 @@ const TickType_t xTimerPeriod = mainTIMER_SEND_FREQUENCY_MS;
 
 	if( xQueue != NULL )
 	{
-#if false	//task
+#if false	//create task function
 		BaseType_t xTaskCreate(TaskFunction_t pxTaskCode,
 		const char* const pcName,
 		const configSTACK_DEPTH_TYPE usStackDepth,
@@ -162,6 +163,7 @@ const TickType_t xTimerPeriod = mainTIMER_SEND_FREQUENCY_MS;
 					NULL );							/* The task handle is not required, so NULL is passed. */
 
 		xTaskCreate( prvQueueSendTask, "TX", configMINIMAL_STACK_SIZE, NULL, mainQUEUE_SEND_TASK_PRIORITY, NULL );
+		xTaskCreate(prvQueueSend2Task, "TX2", configMINIMAL_STACK_SIZE, NULL, mainQUEUE_SEND_TASK_PRIORITY, NULL);
 
 		/* Create the software timer, but don't start it yet. */
 		xTimer = xTimerCreate( "Timer",				/* The text name assigned to the software timer - for debug only as it is not used by the kernel. */
@@ -213,6 +215,36 @@ const uint32_t ulValueToSend = mainVALUE_SENT_FROM_TASK;
 	}
 }
 /*-----------------------------------------------------------*/
+
+static void prvQueueSend2Task(void* pvParameters)
+{
+	TickType_t xNextWakeTime;
+	const TickType_t xBlockTime = mainTASK_SEND_FREQUENCY_MS;
+	const uint32_t ulValueToSend = mainVALUE_SENT_FROM_TASK + 1;
+
+	/* Prevent the compiler warning about the unused parameter. */
+	(void)pvParameters;
+
+	/* Initialise xNextWakeTime - this only needs to be done once. */
+	xNextWakeTime = xTaskGetTickCount();
+
+	for (;; )
+	{
+		/* Place this task in the blocked state until it is time to run again.
+		The block time is specified in ticks, pdMS_TO_TICKS() was used to
+		convert a time specified in milliseconds into a time specified in ticks.
+		While in the Blocked state this task will not consume any CPU time. */
+		vTaskDelayUntil(&xNextWakeTime, xBlockTime);
+
+		/* Send to the queue - causing the queue receive task to unblock and
+		write to the console.  0 is used as the block time so the send operation
+		will not block - it shouldn't need to block as the queue should always
+		have at least one space at this point in the code. */
+		xQueueSend(xQueue, &ulValueToSend, 0U);
+	}
+}
+/*-----------------------------------------------------------*/
+
 
 static void prvQueueSendTimerCallback( TimerHandle_t xTimerHandle )
 {
